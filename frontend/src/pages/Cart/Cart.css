@@ -1,0 +1,244 @@
+.cart {
+    min-height: calc(100vh - 70px);
+    background: #f5f5f5;
+    padding: 2rem;
+}
+
+.cart h1 {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    color: #333;
+}
+
+.empty-cart {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 10px;
+}
+
+.empty-cart h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.empty-cart p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.continue-shopping {
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.continue-shopping:hover {
+    transform: scale(1.05);
+}
+
+.cart-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+}
+
+.cart-items {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.restaurant-section {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem;
+}
+
+.restaurant-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.restaurant-section h3 {
+    color: #333;
+    margin: 0 0 1.5rem 0;
+}
+
+.items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 1fr 100px 100px 30px;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.item-details h4 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.price {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.3rem;
+}
+
+.item-quantity button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.item-quantity button:hover {
+    background: #f0f0f0;
+}
+
+.item-quantity span {
+    flex: 1;
+    text-align: center;
+}
+
+.item-total {
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+}
+
+.remove-btn {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.remove-btn:hover {
+    background: #ff5252;
+    transform: scale(1.1);
+}
+
+.cart-summary {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    height: fit-content;
+    position: sticky;
+    top: 80px;
+}
+
+.cart-summary h3 {
+    margin: 0 0 1.5rem 0;
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.summary-row.total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    border-top: 2px solid #f0f0f0;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.checkout-btn {
+    width: 100%;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.checkout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 212, 170, 0.25);
+}
+
+.continue-shopping-btn {
+    width: 100%;
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    transition: all 0.3s;
+}
+
+.continue-shopping-btn:hover {
+    background: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    .cart-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-summary {
+        position: static;
+    }
+
+    .cart-item {
+        grid-template-columns: 1fr;
+    }
+
+    .item-total,
+    .remove-btn {
+        text-align: right;
+    }
+}

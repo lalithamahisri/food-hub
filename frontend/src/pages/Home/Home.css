@@ -1,0 +1,146 @@
+.home {
+    min-height: calc(100vh - 70px);
+    background: #f5f5f5;
+}
+
+.hero {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 0 0 2rem 0;
+    opacity: 0.9;
+}
+
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.search-bar input {
+    flex: 1;
+    min-width: 250px;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 0.8rem 2rem;
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-bar button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cuisine-filter {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.cuisine-filter h3 {
+    margin: 0 0 1rem 0;
+    color: #333;
+}
+
+.cuisine-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cuisine-btn {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.cuisine-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.cuisine-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.restaurants-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.restaurants-section h2 {
+    margin: 0 0 2rem 0;
+    color: #333;
+    font-size: 2rem;
+}
+
+.restaurants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.no-results {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+}
+
+.no-results p {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .restaurants-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cuisine-buttons {
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+}
