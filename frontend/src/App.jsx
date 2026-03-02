@@ -1,6 +1,5 @@
 import React from 'react'
-import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom'
-import { CartProvider } from './context/CartContext'
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom'import { CartProvider } from './context/CartContext'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import Navbar from './components/Navbar/Navbar'
 import Home from './pages/Home/Home'
