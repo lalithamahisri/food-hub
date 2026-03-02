@@ -1,5 +1,5 @@
 // API Configuration
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 // Create axios-like fetch wrapper
 const apiCall = async (endpoint, options = {}) => {
@@ -34,15 +34,15 @@ const apiCall = async (endpoint, options = {}) => {
 
 // Auth endpoints
 export const authAPI = {
-    register: (data) => apiCall('/auth/register', {
+    register: (data) => apiCall('/api/auth/register', {
         method: 'POST',
         body: JSON.stringify(data),
     }),
-    login: (email, password) => apiCall('/auth/login', {
+    login: (email, password) => apiCall('/api/auth/login', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
     }),
-    getProfile: () => apiCall('/auth/profile'),
+    getProfile: () => apiCall('/api/auth/profile'),
 };
 
 // Restaurant endpoints
