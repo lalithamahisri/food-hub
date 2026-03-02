@@ -23,7 +23,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="navbar-container">
                 <Link to="/" className="logo">
-                    <img src={logoImg} alt="FoodHub Logo" style={{ height: 'auto', width: '150px', filter: 'brightness(0) invert(1)' }} />
+                    <img src={logoImg} alt="FoodHub Logo" style={{ height: 'auto', width: '150px' }} />
                     {/*<span className="logo-text">FoodHub</span>*/}
                 </Link>
 

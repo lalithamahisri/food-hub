@@ -84,3 +84,4 @@ const RestaurantCard = ({ restaurant, onClick }) => {
 };
 
 export default RestaurantCard;
+``
